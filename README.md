@@ -11,6 +11,8 @@ There is an presentation about [Memory leaks in Javascript](https://slides.com/x
   * [Cache service](#cache-service)
 * [Callbacks](#callbacks)
   * [Endpoint status](#endpoint-status)
+* [Not killed timers](#not-killed-timers)
+  * [Gonzalo Ruiz de Villa Example](#gonzalo-ruiz-de-villa-example)
 
 ## Global variables
 
@@ -120,4 +122,23 @@ function checkStatus() {
 }
 
 setInterval(checkStatus, 100)
+```
+
+## Not killed timers
+
+### Gonzalo Ruiz de Villa Example
+
+```js
+
+var strangeObject = { 
+  callAgain: function () {
+    var ref = this 
+    var val = setTimeout(function () {
+      ref.callAgain() 
+    }, 50) 
+  } 
+} 
+
+strangeObject.callAgain() 
+strangeObject = null
 ```
