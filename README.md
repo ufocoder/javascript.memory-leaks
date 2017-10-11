@@ -6,8 +6,11 @@ There are examples from [Memory leaks in Javascript](https://slides.com/xufocode
 # Tables of contents
 
 * [Global variables](#global-variables)
+  * [Cache service](#cache-service)
 
-### Global variables
+## Global variables
+
+### Cache service
 
 There's a cache service with global `cache` variable and after removing this service memory must be released:
 
