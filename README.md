@@ -1,7 +1,9 @@
 Javascript Memory Leaks Examples
 ================================
 
-There are examples from [Memory leaks in Javascript](https://slides.com/xufocoder/memory-leaks-in-the-javascript-4) presentation
+Example of Javascript Memory leaks with explanations and fixes
+
+There is an presentation about [Memory leaks in Javascript](https://slides.com/xufocoder/memory-leaks-in-the-javascript-4)
 
 # Tables of contents
 
