@@ -180,11 +180,6 @@ var interval = setInterval(function() {
 
 ```js
 function f() {
-  var some = [];
-  while(some.length < 1e6) {
-    some.push(some.length);
-  }
-  function unused() { some; } //causes massive memory leak
   return function() {};
 }
 
