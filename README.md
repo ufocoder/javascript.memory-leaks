@@ -15,6 +15,7 @@ There is an presentation about [Memory leaks in Javascript](https://slides.com/x
   * [Gonzalo Ruiz de Villa Example](#gonzalo-ruiz-de-villa-example)
 * [Closures](#closures)
   * [Not used code](#not-used-code)
+  * [MeteorJS Example](#meteorjs-example)
 * [DOM References](#dom-references)
   * [Simple static memory leak](#simple-static-memory-leak)
 
@@ -192,6 +193,51 @@ var interval = setInterval(function() {
   }
 }, 10);
 ```
+
+### MeteorJS Example
+
+[Source of example](https://blog.meteor.com/an-interesting-kind-of-javascript-memory-leak-8b47d2e7f156) 
+
+```js
+var theThing = null
+var replaceThing = function () {
+  var originalThing = theThing
+  var unused = function () {
+    if (originalThing)
+      console.log("hi")
+  }
+  theThing = {
+    longStr: new Array(1000000).join('*'),
+    someMethod: function () {
+      console.log(someMessage)
+    }
+  }
+}
+setInterval(replaceThing, 1000)
+```
+
+**How to fix**
+
+```js
+
+var theThing = null
+var replaceThing = function () {
+  var originalThing = theThing
+  var unused = function () {
+    if (originalThing)
+      console.log("hi")
+  }
+  theThing = {
+    longStr: new Array(1000000).join('*'),
+    someMethod: function () {
+      console.log(someMessage)
+    }
+  }
+  originalThing = null;
+}
+setInterval(replaceThing, 1000)
+```
+
 
 ## DOM References
 
