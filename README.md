@@ -9,12 +9,16 @@ There is an presentation about [Memory leaks in Javascript](https://slides.com/x
 
 * [Global variables](#global-variables)
   * [Cache service](#cache-service)
+* [Callbacks](#callbacks)
+  * [Endpoint status](#endpoint-status)
 
 ## Global variables
 
+Scripts create allocate objects intoz global scope 
+
 ### Cache service
 
-There's a cache service with global `cache` variable and after removing this service memory must be released:
+**What is a memory leak:** after removing `CacheService` instance memory must be released 
 
 ```js
 (function(window) {
@@ -39,7 +43,7 @@ for (let i=0; i < 99999; i++) {
 service = null
 ```
 
-To fix memory leak we should move `cache` variable to CacheService scope like the followings:
+**How to fix:** move `cache` variable to `CacheService` scope like the followings:
 
 ```js
 (function(window) {
@@ -62,4 +66,58 @@ for (let i=0; i < 99999; i++) {
 }
 
 service = null
+```
+
+
+## Callbacks
+
+### Endpoint status
+
+**What is a memory leak:** every interval tick create event listeners
+
+```js
+function checkStatus() {
+  fetch('/endpoint').then(function(response) {
+    var container = document.getElementById("container"); 
+    container.innerHTML = response.status;
+
+    container.addEventListener("mouseenter", function mouseenter() { 
+      container.innerHTML = response.statusText;
+    });
+    container.addEventListener("mouseout", function mouseout() { 
+      container.innerHTML = response.status;
+    });
+  })
+}
+
+setInterval(checkStatus, 100);
+```
+
+**How to fix:** extract all callbacks for event listeners and 
+
+```js
+var container = document.getElementById("container");
+var status = {
+  code: null,
+  text: null
+}
+
+container.addEventListener("mouseenter", function() { 
+  container.innerHTML = status.code;
+});
+
+container.addEventListener("mouseout", function() { 
+  container.innerHTML = status.text;
+});
+
+function processResponse(response) {
+   status.code = response.status
+   status.text = response.statusText
+}
+
+function checkStatus() {
+  fetch('/endpoint').then(processResponse)
+}
+
+setInterval(checkStatus, 100)
 ```
