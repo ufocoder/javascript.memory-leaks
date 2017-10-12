@@ -21,7 +21,7 @@ There is an presentation about [Memory leaks in Javascript](https://slides.com/x
 
 ## Global variables
 
-Scripts create allocate objects intoz global scope 
+Scripts create objects into global scope 
 
 ### Cache service
 
@@ -80,7 +80,7 @@ service = null
 
 ### Endpoint status
 
-**What is a memory leak:** every interval tick create event listeners
+**What is a memory leak:** interval create event listeners for every tick
 
 ```js
 function checkStatus() {
@@ -100,7 +100,7 @@ function checkStatus() {
 setInterval(checkStatus, 100);
 ```
 
-**How to fix:** extract all callbacks for event listeners and 
+**How to fix:** extract creating event listeners 
 
 ```js
 var container = document.getElementById("container");
@@ -155,7 +155,7 @@ strangeObject = null
 
 [Source of example](https://bugs.chromium.org/p/chromium/issues/detail?id=315190)
 
-Memory can't  be released because it can't be allocated before
+Memory can't be released because it can't be allocated before
 
 ```js
 function f() {
