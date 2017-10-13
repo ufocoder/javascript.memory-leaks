@@ -12,7 +12,7 @@ There is an presentation about [Memory leaks in Javascript](https://slides.com/x
 * [Callbacks](#callbacks)
   * [Endpoint status](#endpoint-status)
 * [Not killed timers](#not-killed-timers)
-  * [Gonzalo Ruiz de Villa Example](#gonzalo-ruiz-de-villa-example)
+  * [Gonzalo Ruiz de Villa Modified Example](#gonzalo-ruiz-de-villa-modified-example)
 * [Closures](#closures)
   * [Not used code](#not-used-code)
   * [MeteorJS Example](#meteorjs-example)
