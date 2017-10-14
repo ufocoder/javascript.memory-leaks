@@ -7,8 +7,8 @@ There is an presentation about [Memory leaks in Javascript](https://slides.com/x
 
 # Tables of contents
 
-* [Global variables](#global-variables)
-  * [Cache service](#cache-service)
+* [Global variables](./docs/GlobalVariables/README.md)
+  * [Cache service](./docs/GlobalVariables/CacheService.md)
 * [Callbacks](#callbacks)
   * [Endpoint status](#endpoint-status)
 * [Not killed timers](#not-killed-timers)
