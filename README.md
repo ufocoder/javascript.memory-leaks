@@ -22,3 +22,5 @@ Javascript Memory Leaks Page
 * [Memory Analysis 101](https://developer.chrome.com/devtools/docs/memory-analysis-101)
 * [Fixing Memory Leaks in AngularJS and other JavaScript Applications](https://www.codeproject.com/Articles/882966/Fixing-Memory-Leaks-in-AngularJS-and-other-JavaScr)
 * [The Breakpoint Ep. 8: Memory Profiling with Chrome DevTools](https://www.youtube.com/watch?v=L3ugr9BJqIs)
+* [Effectively Managing Memory at Gmail scale](https://www.html5rocks.com/en/tutorials/memory/effectivemanagement/)
+
