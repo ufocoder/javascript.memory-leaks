@@ -1,11 +1,7 @@
-Javascript Memory Leaks Examples
-================================
+Javascript Memory Leaks Page
+============================
 
-Example of Javascript Memory leaks with explanations and fixes
-
-There is an presentation about [Memory leaks in Javascript](https://slides.com/xufocoder/memory-leaks-in-the-javascript-4)
-
-# Tables of contents
+## Examples 
 
 * [Global variables](./docs/GlobalVariables/README.md)
   * [Cache service](./docs/GlobalVariables/CacheService.md)
@@ -18,3 +14,7 @@ There is an presentation about [Memory leaks in Javascript](https://slides.com/x
   * [MeteorJS Example](./docs/Closures/MeteorJSExample.md)
 * [DOM References](./docs/DOMReferences/README.md)
   * [Simple static memory leak](./docs/DOMReferences/SimpleStaticMemoryLeak.md)
+
+## Resources
+
+* [Memory leaks in Javascript](https://slides.com/xufocoder/memory-leaks-in-the-javascript-4)
