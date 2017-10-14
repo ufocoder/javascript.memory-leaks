@@ -18,3 +18,7 @@ Javascript Memory Leaks Page
 ## Resources
 
 * [Memory leaks in Javascript](https://slides.com/xufocoder/memory-leaks-in-the-javascript-4)
+* [Memory leak patterns in JavaScript](https://www.ibm.com/developerworks/web/library/wa-memleak/wa-memleak-pdf.pdf)
+* [Memory Analysis 101](https://developer.chrome.com/devtools/docs/memory-analysis-101)
+* [Fixing Memory Leaks in AngularJS and other JavaScript Applications](https://www.codeproject.com/Articles/882966/Fixing-Memory-Leaks-in-AngularJS-and-other-JavaScr)
+* [The Breakpoint Ep. 8: Memory Profiling with Chrome DevTools](https://www.youtube.com/watch?v=L3ugr9BJqIs)
