@@ -12,6 +12,7 @@ Javascript Memory Leaks Page
 * [Closures](./docs/Closures/README.md)
   * [Not used code](./docs/Closures/NotUsedCode.md)
   * [MeteorJS Example](./docs/Closures/MeteorJSExample.md)
+  * [Promise.race Example](./docs/Closures/Promise.race.md)
 * [DOM References](./docs/DOMReferences/README.md)
   * [Simple static memory leak](./docs/DOMReferences/SimpleStaticMemoryLeak.md)
 * [jQuery](./docs/JQuery/README.md)
